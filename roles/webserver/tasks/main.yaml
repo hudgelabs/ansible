@@ -1,0 +1,8 @@
+---
+- name: Ensure that IIS is installed
+  win_feature:
+    name: "Web-Server"
+    state: present
+    restart: no
+    include_sub_features: no
+    include_management_tools: no

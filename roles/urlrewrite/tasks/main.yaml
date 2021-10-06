@@ -1,0 +1,11 @@
+---
+- name: Ensure URL Rewrite is Installed
+  win_chocolatey:
+    name: urlrewrite
+    state: present
+
+#- name: Install Microsoft URL Rewrite Module 2.0 for IIS x64
+#  win_package:
+#    product_id: '{08F0318A-D113-4CF0-993E-50F191D397AD}'
+#    path: https://download.microsoft.com/download/C/9/E/C9E8180D-4E51-40A6-A9BF-776990D8BCA9/rewrite_amd64.msi
+#    arguments: /q /norestart

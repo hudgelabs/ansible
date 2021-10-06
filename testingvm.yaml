@@ -1,0 +1,9 @@
+---
+- hosts: testingvm
+  roles:
+    - webserver
+    - urlrewrite
+    - dbserver
+    - git
+    - visualstudio
+    - reboot

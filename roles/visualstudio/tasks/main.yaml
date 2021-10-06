@@ -1,0 +1,6 @@
+---
+- name: Ensure Visual Studio 2019 Community is Installed
+  win_chocolatey:
+    name: visualstudio2019community
+    state: present
+    package_params: '"--add Microsoft.VisualStudio.Workload.NativeDesktop;includeRecommended;includeOptional"'
