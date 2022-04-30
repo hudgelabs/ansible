@@ -2,7 +2,7 @@
 This project is a collection of Ansible playbooks that I have written throughout my career. 
 
 ## Motivation
-Ansible is one of my favorite tools for infrastructure automation and I thought other DevOps Engineers might find them helpful.
+Ansible is one of my favorite tools for infrastructure automation and I thought other DevOps Engineers might find them useful.
 
 ## Features
 Automate the configuration of a self-hosted .NET 4.X GitLab Runner with the dotnet45-gitlab-runner.yaml playbook.
