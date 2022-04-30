@@ -1,0 +1,10 @@
+---
+- hosts: #Replace this with the host name from the Ansible hosts file
+  roles:
+    - git
+    - powershell-core
+    - visualstudio2019buildtools
+    - visualstudio2019-workload-webbuildtools
+    - jq
+    - nuget.commandline
+    - dotnet4.5

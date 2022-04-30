@@ -1,0 +1,5 @@
+---
+- name: Ensure Visual Studio 2019 Build Tools is Installed
+  win_chocolatey:
+    name: visualstudio2019buildtools
+    state: present

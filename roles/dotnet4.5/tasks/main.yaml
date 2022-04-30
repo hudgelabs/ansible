@@ -1,0 +1,5 @@
+---
+- name: Ensure Dot Net 4.5 Framework is Installed
+  win_chocolatey:
+    name: dotnet4.5
+    state: present

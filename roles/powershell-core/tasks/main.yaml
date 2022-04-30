@@ -1,0 +1,5 @@
+---
+- name: Ensure PowerShell Core is installed
+  win_chocolatey:
+    name: powershell-core
+    state: present

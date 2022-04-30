@@ -1,0 +1,5 @@
+---
+- name: Ensure Web development build tools workload for Visual Studio 2019 Build Tools are Installed
+  win_chocolatey:
+    name: visualstudio2019-workload-webbuildtools
+    state: present

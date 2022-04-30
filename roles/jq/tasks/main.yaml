@@ -1,0 +1,5 @@
+---
+- name: Ensure jq is Installed
+  win_chocolatey:
+    name: jq
+    state: present
