@@ -8,7 +8,7 @@ Ansible is one of my favorite tools for infrastructure automation and I thought 
 Automate the configuration of a self-hosted .NET 4.X GitLab Runner with the dotnet45-gitlab-runner.yaml playbook.
 
 ## Installation
-Installing Ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
+[Installing Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 ## How to use?
 - Run ConfigureRemotingForAnsible.ps1 on the target host
