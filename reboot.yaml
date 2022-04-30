@@ -1,4 +1,4 @@
 ---
-- hosts: developmentvm
+- hosts: #Replace this with the host name from the Ansible hosts file
   roles:
     - reboot

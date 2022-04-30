@@ -1,8 +1,0 @@
----
-- hosts: developmentvm
-  roles:
-    - webserver
-    - urlrewrite
-    - dbserver
-    - git
-    - visualstudio

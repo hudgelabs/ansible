@@ -1,8 +1,0 @@
----
-- name: Ensure that IIS is Not Installed
-  win_feature:
-    name: "Web-Server"
-    state: absent
-    restart: no
-    include_sub_features: no
-    include_management_tools: no

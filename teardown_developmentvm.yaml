@@ -1,4 +1,0 @@
----
-- hosts: developmentvm
-  roles:
-    - webserver_uninstall
