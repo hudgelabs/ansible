@@ -11,9 +11,9 @@ Automate the configuration of a self-hosted .NET 4.X GitLab Runner with the dotn
 Installing Ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 
 ## How to use?
--Run ConfigureRemotingForAnsible.ps1 on the target host
--Add the host to your Ansible hosts file
--Run the dotnet45-gitlab-runner.yaml playbook (or another playbook in the repo)
+- Run ConfigureRemotingForAnsible.ps1 on the target host
+- Add the host to your Ansible hosts file
+- Run the dotnet45-gitlab-runner.yaml playbook (or another playbook in the repo)
 
 ## Contribute
 Pull requests are always welcome!
