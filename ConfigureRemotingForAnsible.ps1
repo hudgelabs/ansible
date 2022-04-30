@@ -3,7 +3,7 @@
 # Configure a Windows host for remote management with Ansible
 # -----------------------------------------------------------
 # This script is a customized version of the following: https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
-# This script is maintained by YPrime and is for YPrime internal purposes only.
+# This script is maintained by hudgelabs
 #
 # This script checks the current WinRM (PS Remoting) configuration and makes
 # the necessary changes to allow Ansible to connect, authenticate and
