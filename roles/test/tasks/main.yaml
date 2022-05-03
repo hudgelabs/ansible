@@ -1,7 +1,5 @@
 ---
-- hosts: localhost
-  connection: local
-  tasks:
+- tasks:
   - shell: echo 'test'
     register: foo
   - debug: msg="the echo was {{ foo.stfout }}"
