@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
   connection: local
-  gather_facts: no
   tasks:
   - shell: echo 'test'
     register: foo
