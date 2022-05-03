@@ -1,4 +1,4 @@
 ---
 - name: Test role
-  ansible.builtin.shell:
-    cmd: echo 'test'
+  ansible.builtin.debug:
+    msg: "Test completed successfully. Ansible is working!"
