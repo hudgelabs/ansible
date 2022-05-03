@@ -1,5 +1,4 @@
 ---
-- tasks:
-  - shell: echo 'test'
-    register: foo
-  - debug: msg="the echo was {{ foo.stfout }}"
+- name: Test role
+  ansible.builtin.shell:
+    cmd: echo 'test'
