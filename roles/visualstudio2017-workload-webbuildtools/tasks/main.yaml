@@ -1,0 +1,6 @@
+---
+- name: Ensure Visual Studio 2017 Web Development Build Tools are installed
+  win_chocolatey:
+    name: visualstudio2017-workload-webbuildtools
+    version: '1.3.3'
+    state: present

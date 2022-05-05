@@ -1,0 +1,6 @@
+---
+- name: Ensure Visual Studio 2017 Build Tools are installed
+  win_chocolatey:
+    name: visualstudio2017buildtools
+    version: '15.9.47.0'
+    state: present
