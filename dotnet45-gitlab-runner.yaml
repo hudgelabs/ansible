@@ -5,4 +5,5 @@
     - jq
     - nuget.commandline
     - dotnet4.5
-    - visualstudio2017buildtools      
+    - visualstudio2017buildtools
+    - nunit

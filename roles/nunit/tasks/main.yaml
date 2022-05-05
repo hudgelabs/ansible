@@ -1,0 +1,6 @@
+---
+- name: Ensure NUnit is Installed
+  win_chocolatey:
+    name: nunit-console-runner
+    version: '3.15.0'
+    state: present
