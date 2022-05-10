@@ -1,5 +1,5 @@
 ## Dotnet 4.5 GitLab Runner Playbook
-This playbook sets up a Windows 2012 R2 server to act as a GitLab build server.  
+This playbook sets up a Windows 2012 R2 server to act as a GitLab build server for .NET 4.X projects.  
 
 ## Installation
 - ansible-playbook dotnet-gitlab-runner.yaml
