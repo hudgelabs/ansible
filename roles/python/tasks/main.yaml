@@ -1,0 +1,7 @@
+---
+- name: Ensure Python is Installed
+  win_chocolatey:
+    name: python
+    version: '3.11.0-b1'
+    state: present
+    allow_prerelease: yes

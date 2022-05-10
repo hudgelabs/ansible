@@ -1,0 +1,6 @@
+---
+- name: Ensure .NET 4.7.2 is Installed
+  win_chocolatey:
+    name: dotnet4.7.2
+    version: '4.7.2.20210903'
+    state: present

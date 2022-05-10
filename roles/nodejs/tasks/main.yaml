@@ -1,0 +1,6 @@
+---
+- name: Ensure Node.js is Installed
+  win_chocolatey:
+    name: nodejs
+    version: '17.9.0'
+    state: present

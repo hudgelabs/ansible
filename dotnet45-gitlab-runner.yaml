@@ -7,3 +7,6 @@
     - dotnet4.5
     - visualstudio2017buildtools
     - nunit
+    - python
+    - nodejs
+    - dotnet4.7.2
