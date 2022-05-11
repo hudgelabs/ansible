@@ -14,6 +14,10 @@ Automate the configuration of a self-hosted .NET 4.X GitLab Runner with the dotn
 - Run ConfigureRemotingForAnsible.ps1 on the target host
 - Add the host to your Ansible hosts file
 - Run the dotnet45-gitlab-runner.yaml playbook (or another playbook in the repo)
+- Use the vs_buildtools installer to add VS 2017 Web Development Tools
+- Make sure the cypher suite settings allow NuGet restore commands
+- Make sure the GitLab runner service is running under an admin account
+- Create a system environment variable that points to npm.cnmd
 
 ## Contribute
 Pull requests are always welcome!
