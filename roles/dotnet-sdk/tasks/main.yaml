@@ -1,0 +1,6 @@
+---
+- name: Ensure .NET 6 is Installed
+  win_chocolatey:
+    name: dotnet-sdk
+    version: '6.0.300'
+    state: present

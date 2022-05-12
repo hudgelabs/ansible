@@ -1,0 +1,6 @@
+---
+- name: Ensure Java 8 is Installed
+  win_chocolatey:
+    name: jdk8
+    version: '8.0.211'
+    state: present

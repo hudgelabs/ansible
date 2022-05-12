@@ -1,7 +1,4 @@
 ---
 - hosts: buildservers
   roles:
-    - vscode
-    - vscode-java-test
-    - jdk8
     - dotnet-sdk
