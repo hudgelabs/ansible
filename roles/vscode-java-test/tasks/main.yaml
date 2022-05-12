@@ -1,0 +1,6 @@
+---
+- name: Ensure JUnit extension for VSCode is Installed
+  win_chocolatey:
+    name: vscode-java-test
+    version: '0.35.2022050602'
+    state: present

@@ -1,0 +1,5 @@
+---
+- hosts: buildservers
+  roles:
+    - vscode
+    - vscode-java-test

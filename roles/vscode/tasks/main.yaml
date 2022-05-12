@@ -1,0 +1,6 @@
+---
+- name: Ensure VSCode is Installed
+  win_chocolatey:
+    name: vscode
+    version: '1.67.1'
+    state: present

@@ -10,3 +10,5 @@
     - python
     - nodejs
     - dotnet4.7.2
+    - vscode
+    - vscode-java-test
