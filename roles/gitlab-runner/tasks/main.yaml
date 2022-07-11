@@ -1,0 +1,16 @@
+---
+- name: Ensure the GitLab Runner service is stopped
+  ansible.windows.win_shell: |
+    cd C:\GitLab-Runner
+    .\gitlab-runner-windows-amd64.exe stop
+
+- name: Download the GitLab Runner binary
+  win_get_url:
+    url: https://s3.amazonaws.com/gitlab-runner-downloads/main/binaries/gitlab-runner-windows-amd64.exe
+    dest: C:\temp\gitlab-runner-windows-amd64.exe
+
+- name: Replace the runner's executable and start the service
+  ansible.windows.win_shell: |
+    xcopy /y /s C:\temp\gitlab-runner-windows-amd64.exe C:\GitLab-Runner
+    cd C:\GitLab-Runner
+    .\gitlab-runner-windows-amd64.exe start

@@ -2,4 +2,5 @@
 - name: Ensure Visual Studio 2019 Build Tools is Installed
   win_chocolatey:
     name: visualstudio2019buildtools
+    version: '16.7.0.0'
     state: present
