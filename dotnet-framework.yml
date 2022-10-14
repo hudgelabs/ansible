@@ -1,0 +1,59 @@
+#This .gitlab-ci.yml file builds and tests the customer facing .NET Framework 4.7.2 application 
+
+variables:
+  NUGET_PATH:
+  MSBUILD_PATH: 
+  NUNIT_PATH: 
+  TEST_FOLDER: 
+  SOLUTION: 
+
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  tags:
+    - dotnet-build
+  stage: build
+  script:
+    - '& "$env:NUGET_PATH" restore <SOLUTION>'
+    - '& "$env:MSBUILD_PATH" "$env:TEST_FOLDER" /p:Configuration=Release /p:Platform=AnyCPU /clp:ErrorsOnly'
+    - '& "$env:MSBUILD_PATH" "$env:SOLUTION" /p:DeployOnBuild=true /p:Configuration=Dev /p:Platform=AnyCPU /p:DeployDefaultTarget=WebPublish /p:DebugSymbols=False /p:WebPublishMethod=FileSystem /p:PublishUrl="<PUBLISH PATH>"'
+  artifacts:
+    expire_in: 2 days
+    name: "<ARTIFACT NAME>"
+    paths:
+      - '<PATHS OF ARTIFACTS TO SAVE>'
+
+test_job:
+  tags:
+    - dotnet-build
+  stage: test
+  script:
+    - '& dotnet test "$env:TEST_FOLDER\<TEST DLL>" --test-adapter-path:. --logger:"junit;MethodFormat=Class;FailureBodyFormat=Verbose"'
+  artifacts:
+    when: always
+    paths:
+      - '**\TestResults\TestResults.xml'
+    reports:
+      junit: 
+       - '**\TestResults\TestResults.xml'
+  dependencies:
+    - build_job
+  allow_failure: true
+
+deploy_job:
+  variables:
+    GIT_STRATEGY: none
+    GIT_CHECKOUT: "false"
+  tags:
+    - <DEPLOY TARGET TAG>
+  environment:
+    name: Development
+  stage: deploy
+  script:
+    - 'Get-ChildItem -Path "C:\inetpub\wwwroot\<WEBSITE FOLDER>" | Remove-Item -Recurse -Force -Verbose'
+    - 'xcopy /y /s "<SOURCE PATH>\*.*" "C:\inetpub\wwwroot\<WEBSITE FOLDER>"'
+  dependencies:
+    - build_job

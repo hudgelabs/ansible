@@ -1,0 +1,27 @@
+# Use the following Docker image
+FROM python:3.10-slim-bullseye
+
+# Initialize PIPINI argument to pass GitLab access token
+ARG PIPINI
+
+# Set the timezone to Eastern in the Docker image
+ENV TZ="America/New_York"
+RUN ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
+
+# Install dependencies
+RUN apt-get update
+RUN apt-get install -y dialog apt-utils
+RUN apt-get install -y g++ unixodbc-dev
+
+# Create virtual environment
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# Install the requirements.txt with an additionally defined Python package
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt --extra-index-url https://__token__:$PIPINI@<URL FOR GITLAB PROJECT CONTAINING PYTHON PACKAGE>
+
+# Run the application
+COPY src/ src/
+ENTRYPOINT ["python", "-m", "src", "<MODULE NAME>"]
